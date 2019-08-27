@@ -1,15 +1,21 @@
 <!doctype html>
-<html ng-app>
+<html>
 <head>
     <meta charset="utf-8">
-    <script src="https://cdn.bootcss.com/angular.js/1.6.7/angular.min.js"></script>
+    <script src="node_modules/_angular@1.6.7@angular/angular.min.js"></script>
+    <script src="index.js"></script>
 </head>
-<body>
+<body ng-app="indexApp" ng-controller="indexCtrl">
     <div>
         <label>Name:</label>
         <input type="text" ng-model="yourName" placeholder="Enter a name here">
         <hr>
         <h1>Hello friend: {{yourName}}!</h1>
     </div>
+    <div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">
+        <p>姓为 {{ person.lastName + " " + person.firstName }}</p>     
+    </div>
+    <input type="text" ng-model="name"/>
+    <h1>你输入了：{{ name }}</h1>
 </body>
 </html>
